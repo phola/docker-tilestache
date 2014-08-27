@@ -19,6 +19,9 @@ RUN pip install circus chaussette gevent
 # http://obroll.com/install-python-pil-python-image-library-on-ubuntu-11-10-oneiric/
 RUN pip uninstall -y PIL
 RUN pip install Pillow
+RUN wget https://github.com/downloads/migurski/Blit/Blit-1.4.0.tar.gz
+RUN pip install -U Blit-1.4.0.tar.gz
+
 RUN yes | apt-get install -y ttf-mscorefonts-installer
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
